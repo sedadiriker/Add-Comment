@@ -50,11 +50,11 @@ const deleteComment = async (id) => {
               <button onClick={cancelEdit}>İptal</button>
             </form>
           ) : (
-            <>
+            <div>
               {comment.comment}
               <button className="btn btn-success" onClick={() => submitEdit(comment)}>Düzenle</button>
               <button className="btn btn-danger" onClick={() => deleteComment(comment.id)}>Sil</button>
-            </>
+            </div>
           )}
         </div>
       ))}
