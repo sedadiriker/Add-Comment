@@ -52,7 +52,8 @@ const deleteComment = async (id) => {
           ) : (
             <div>
               {comment.comment}
-              <button className="btn btn-success" onClick={() => submitEdit(comment)}>Düzenle</button>
+              <button className="btn btn-success" onClick={() => { setEdit(comment.id); setEditComment(comment.comment); }}>Düzenle</button>
+
               <button className="btn btn-danger" onClick={() => deleteComment(comment.id)}>Sil</button>
             </div>
           )}
